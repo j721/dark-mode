@@ -11,7 +11,7 @@ const useDarkMode =(key, initialValue) =>{
         return darkMode ? setDarkMode(false): setDarkMode(true);
     };
 
-    //useEffect to add or remove dark-mode class and DOM maniuplation
+    //useEffect to add or remove dark-mode to body element with use of DOM 
     useEffect(()=>{
         if (darkMode){
             document.body.classList.add("dark-mode")
