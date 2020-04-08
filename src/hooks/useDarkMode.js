@@ -5,12 +5,6 @@ const useDarkMode =(key, initialValue) =>{
 //Call useLocalStorage  and pass in key and initial value
     const [darkMode, setDarkMode] = useLocalStorage(key, initialValue);
     
-    // const toggleDarkMode= event =>{
-    //     event.preventDefault();
-    //     //switch between DarkMode state true or false
-    //     return darkMode ? setDarkMode(false): setDarkMode(true);
-    // };
-
     //useEffect to add or remove dark-mode to body element with use of DOM 
     useEffect(()=>{
         if (darkMode === true){
