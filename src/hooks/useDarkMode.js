@@ -9,9 +9,11 @@ const useDarkMode =(key, initialValue) =>{
     useEffect(()=>{
         if (darkMode === true){
             document.body.classList.add("dark-mode")
+            console.log("dark mode enabled")
         }
         else{
             document.body.classList.remove("dark-mode")
+            console.log("dark mode disabled")
         }
     },[darkMode]);
 
