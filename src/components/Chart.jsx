@@ -28,35 +28,35 @@ const Chart = ({ sparklineData }) => {
     .filter(data => data);
 
   return (
-    <LineChart
-    layout="vertical"
-    width={500}
-    height={300}
-    data={formattedData}
-    margin={{
-      top: 20, right: 30, left: 20, bottom: 5,
-    }}
-  >
-    <CartesianGrid strokeDasharray="3 3" />
-    <XAxis type="number" domain={[0, 'dataMax + 1000']} />
-    <YAxis dataKey="name" type="category" />
-    <Tooltip />
-    <Legend />
-    <Line dataKey="pv" stroke="#8884d8" />
-    <Line dataKey="uv" stroke="#82ca9d" />
-  </LineChart>
-    );
-  }
+  //   <LineChart
+  //   layout="vertical"
+  //   width={500}
+  //   height={300}
+  //   data={formattedData}
+  //   margin={{
+  //     top: 20, right: 30, left: 20, bottom: 5,
+  //   }}
+  // >
+  //   <CartesianGrid stroke="white" strokeDasharray="3 3"  />
+  //   <XAxis dataKey="date" interval={3} />
+  //   <YAxis  />
+  //   <Tooltip />
+  //   <Legend />
+  //   <Line type ="monotone" dataKey="value" stroke="#8884d8" />
+
+  // </LineChart>
+  //   );
+  // }
 
 
-//     <LineChart width={1100} height={300} data={formattedData}>
-//       <Line type="monotone" dataKey="value" stroke="#8884d8" />
-//       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-//       <XAxis dataKey="date" interval={3} />
-//       <YAxis />
-//       <Tooltip />
-//     </LineChart>
-//   );
-// };
+    <LineChart width={1100} height={300} data={formattedData}>
+      <Line type="monotone" dataKey="value" stroke="#8884d8" />
+      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+      <XAxis dataKey="date" interval={3} />
+      <YAxis />
+      <Tooltip />
+    </LineChart>
+  );
+};
 
 export default Chart;
